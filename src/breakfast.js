@@ -17,7 +17,7 @@ function Menubf(props) {
                         props.onClick([{
                         comida: Object.keys(props.listBreakfast.Menu["Cafe con leche"])[0],
                         precio: props.listBreakfast.Menu["Cafe con leche"]["cafe con leche"]
-                        }])}}>Cafe con Leche $700</button>
+                        }])}} >Cafe con Leche $700</button>
                 <button className="sandwich" onClick={() =>{
                         props.onClick([{
                         comida: Object.keys(props.listBreakfast.Menu["Sandwich de jamon y queso"])[0],
