@@ -1,0 +1,77 @@
+.garzon{
+    width: 50%;
+}
+
+.kitchen{
+    width: 50%;
+}
+
+.main{
+    display: flex;
+}
+
+.title{
+    color: #BF00FF;
+    padding: 10px;
+    text-decoration: underline; 
+    font-size: 40px; 
+    line-height: 50px;
+    border-radius: 4px;  
+    border-color: black;   
+    background: #E6E6E6;
+    position: relative;  
+    text-align: -webkit-center; 
+    display: block;
+}
+
+.title_garzon {
+    position: relative;
+    font-size: 40px;
+    /* top: 10px;  */
+    left: 100px; 
+    /* width: 60%; */
+}
+
+.mailing_data, .click_data{
+    /* top: 20px;  */
+    /* display: block;  */
+    position: relative;
+    right: -12px;  
+}
+
+.mailing_data{
+    font-size: 15px;
+    padding: 3px;
+    border-radius: 13px;
+    border-color: blueviolet; 
+
+} 
+
+.click_data{
+    background-color: blueviolet;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    /* display: flex; */
+    font-size: 15px;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+    border-radius: 20px;
+ }
+
+ .option_menu{
+     display: flex;
+     top: 15px;
+     position: relative;
+ }
+
+ .menu_option{
+     position: relative;
+     top: 20px;
+ }
+
+
+
+
+ 

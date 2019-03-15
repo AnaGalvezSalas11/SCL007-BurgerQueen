@@ -1,0 +1,63 @@
+{
+    "Menu": {
+        "Cafe americano": {
+            "cafe americano": 500
+        },
+        "Cafe con leche": {
+            "cafe con leche": 700
+        },
+        "Sandwich de jamon y queso": {
+            "Sandwich de jamon y queso": 1000
+        },
+        "Jugo natural": {
+            "Jugo natural": 700
+        },
+        "Hamburguesa simple de res": {
+            "Hamburguesa simple de res": 1500
+        },
+        "Hamburguesa simple de pollo": {
+            "Hamburguesa simple de pollo": 1500
+        },
+        "Hamburguesa simple vegetariana": {
+            "Hamburguesa simple vegetariana": 1500
+        },
+        "Hamburguesa doble de res": {
+            "Hamburguesa doble de res": 2500
+        },
+        "Hamburguesa doble de pollo": {
+            "Hamburguesa doble de pollo": 2500
+        },
+        "Hamburguesa doble vegetariana": {
+            "Hamburguesa doble vegetariana": 2500
+        },
+        "Huevo": {
+            "Huevo": 500
+        },
+        "Queso": {
+            "Queso": 500
+        },
+        "Papas fritas": {
+            "Papas fritas": 500
+        },
+        "Onion rings": {
+            "Onion rings": 500
+        },
+
+        "Agua 500 ml":{
+            "Agua 500 ml": 500
+        },
+
+        "Agua 750 ml":{
+            "Agua 750 ml": 800
+        },
+
+        "Gaseosa 500 ml":{
+            "Gaseosa 500 ml": 700
+        },
+
+        "Gaseosa 750 ml":{
+            "Gaseosa 750 ml": 1000
+        }
+
+    }
+}

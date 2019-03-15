@@ -1,0 +1,11 @@
+.water, .waterBig, .soda, .bigSoda{
+    background-color: #A098BE;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+

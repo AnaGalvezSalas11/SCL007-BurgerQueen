@@ -1,0 +1,13 @@
+.breakfastButton{
+    background-color: blueviolet;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    /* display: flex; */
+    font-size: 15px;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+    border-radius: 20px;
+
+}
