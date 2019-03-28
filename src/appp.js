@@ -9,6 +9,8 @@ import OptionFood from './optionFood';
 import OptionLiquids from './optionliquids';
 import MenuLiquids from './liquids';
 import KitchenOrder from './kitchen.js'
+import { database } from './provider.js'
+
 import './kitchen.css';
 
 
@@ -31,6 +33,8 @@ class BurguerQueen extends Component {
         this.buttonFood = this.buttonFood.bind(this);
         this.buttonLiquids = this.buttonLiquids.bind(this);
         this.addlist = this.addlist.bind(this);
+        this.deleteList = this.deleteList.bind(this);
+        this.submit = this.submit.bind(this)
     }
 
     upDate() {
@@ -39,6 +43,30 @@ class BurguerQueen extends Component {
             name: this.state.input,
 
         })
+    }
+
+    deleteList(h){ 
+        this.setState({
+            ...this.state,
+            list: this.state.list.filter((delete1) => {
+                return delete1 !== h
+            })
+        })
+        
+    }
+    
+    submit(){
+        const submitOrder = {
+            name: this.state.name,
+            list: this.state.list
+        }
+
+        let saveOrder = database.ref("cocina").push().key;
+        let updates = {}
+
+        updates["cocina/" + saveOrder] = submitOrder;
+
+        return database.ref().update(updates) 
     }
 
     addlist(a){
@@ -57,6 +85,8 @@ class BurguerQueen extends Component {
         })
     }
 
+
+   
     buttonFood() {
         this.setState({
             ...this.state,
@@ -114,7 +144,7 @@ class BurguerQueen extends Component {
                         </div>
                     </div>
                     <div className="kitchen">
-                        <KitchenOrder listOrder={this.state.list}  nameClient={this.container()}/>
+                        <KitchenOrder submitFireBase={this.submit} deleteProduct={this.deleteList} listOrder={this.state.list}  nameClient={this.container()}/>
                     </div>
                 </div>
             </div>

@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^5.9.1",
     "gh-pages": "^2.0.1",
+    "homepage": "https://anagalvezsalas11.github.io/SCL007-BurgerQueen/",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "^2.1.8",
-    "homepage": "https://anagalvezsalas11.github.io/SCL007-BurgerQueen/"
-
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,10 +16,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-     "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -b master -d build"
   },
-  
-
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -29,5 +27,4 @@
     "not ie <= 11",
     "not op_mini all"
   ]
-
 }

@@ -3,20 +3,22 @@ import './kitchen.css';
 
 function KitchenOrder(props) {
 
-    const mostrarlista = props.listOrder.map(item => {
+    const showList = props.listOrder.map((item, i) => {
         return (
-            <li>{item.comida} ${item.precio}    Borrar</li>
+            <li key={i} className= "detailList">{item.food} ${item.price} <button className="btndelete" onClick = {()=>props.deleteProduct(item)}>X</button></li>
     )})
 
-    const total = props.listOrder.reduce(function (antes, despues) {
-            return  (antes + despues.precio)},0)
+    const total = props.listOrder.reduce((before, after) => {
+            return  (before + after.price)},0)
+    
         
-    return(
+    return (
         <div>
             <div className="title_kitchen">Cocina</div>
             <div className="content">Nombre Cliente: {props.nameClient}</div>
-            <ul className="requested_detail">{mostrarlista}</ul>
+            <ul className="requested_detail">{showList}</ul>
             <ul className="total">Total = ${total}</ul>
+            <button className="btnsubmit" onClick={props.submitFireBase} > Enviar a Cocina </button>
         </div>
     )
 }
