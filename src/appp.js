@@ -14,7 +14,7 @@ import { database } from './provider.js'
 import './kitchen.css';
 
 
-class BurguerQueen extends Component {
+class BurgerQueen extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -155,4 +155,4 @@ class BurguerQueen extends Component {
 
 
 
-export default BurguerQueen;
+export default BurgerQueen;
