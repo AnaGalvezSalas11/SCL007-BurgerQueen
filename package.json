@@ -5,7 +5,7 @@
   "dependencies": {
     "firebase": "^5.9.1",
     "gh-pages": "^2.0.1",
-    "homepage": "https://github.com/AnaGalvezSalas11/SCL007-BurgerQueen",
+    "homepage": "https://anagalvezsalas11.github.io/SCL007-BurgerQueen/",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "^2.1.8"
