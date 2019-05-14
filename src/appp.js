@@ -8,10 +8,11 @@ import MenuFood from './food';
 import OptionFood from './optionFood';
 import OptionLiquids from './optionliquids';
 import MenuLiquids from './liquids';
+import { database } from './provider.js';
+import './kitchenorderreturn';
+import Kitchenreturn from './kitchenorderreturn.js';
 import KitchenOrder from './kitchen.js'
-import { database } from './provider.js'
 
-import './kitchen.css';
 
 
 class BurgerQueen extends Component {
@@ -24,7 +25,10 @@ class BurgerQueen extends Component {
             watchfood: false,
             watchliquids: false,
             data: props.data,
-            list: []
+            list: [],
+            hidediv: false,
+            message: "",
+
 
         }
         this.upDate = this.upDate.bind(this);
@@ -34,11 +38,17 @@ class BurgerQueen extends Component {
         this.buttonLiquids = this.buttonLiquids.bind(this);
         this.addlist = this.addlist.bind(this);
         this.deleteList = this.deleteList.bind(this);
-        this.submit = this.submit.bind(this)
+        this.submit = this.submit.bind(this);
+        this.updateOrdersData = this.updateOrdersData.bind(this);
+
+        database.ref('cocina').on('value',function(snap){
+            this.updateOrdersData(snap.val());
+        }.bind(this))
     }
 
     upDate() {
         this.setState({
+            ...this.state,
             input: "",
             name: this.state.input,
 
@@ -64,10 +74,27 @@ class BurgerQueen extends Component {
         let saveOrder = database.ref("cocina").push().key;
         let updates = {}
 
+        setTimeout(()=>{this.setState({
+            ...this.state,
+            hidediv: true,
+            // list: [],
+            // name: "",
+            });
+        }, 0);
+
         updates["cocina/" + saveOrder] = submitOrder;
 
-        return database.ref().update(updates) 
+        database.ref().update(updates) 
+        return
     }
+
+    updateOrdersData(ordersData){
+        this.setState({
+            ...this.state,
+            message: ordersData
+        });
+    }                 
+ 
 
     addlist(a){
         this.setState({
@@ -85,6 +112,7 @@ class BurgerQueen extends Component {
         })
     }
 
+  
 
    
     buttonFood() {
@@ -114,6 +142,8 @@ class BurgerQueen extends Component {
         })
     }
 
+    
+
     container() {
         return (this.state.name)
     }
@@ -122,7 +152,7 @@ class BurgerQueen extends Component {
         return (
             <div>
                 <div className="title"> Burguer Queen </div>
-                <div className="main">
+                 <div className="main">
                     <div className="garzon">
                         <div className="title_garzon">Garzon</div>
                         <div className = "clientName"> 
@@ -146,11 +176,16 @@ class BurgerQueen extends Component {
                     <div className="kitchen">
                         <KitchenOrder submitFireBase={this.submit} deleteProduct={this.deleteList} listOrder={this.state.list}  nameClient={this.container()}/>
                     </div>
+                    
                 </div>
+
+                {this.state.hidediv && <div className = "kitchenlist">
+                        <Kitchenreturn returnMessage = {this.state.message} />
+                </div>}
             </div>
         )}
-
-        }
+    
+    }
 
 
 

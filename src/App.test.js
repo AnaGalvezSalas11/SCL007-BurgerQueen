@@ -9,10 +9,11 @@ Enzyme.configure({ adapter: new Adapter() });
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Appp />, div);
+  ReactDOM.render(<Appp/>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 
+//instance
 
 it('debe retornar ana galvez', () => {  
       const burgerComponent = Enzyme.mount(<BurgerQueen />); //burgerQueen es el nombre de mi componente donde esta mi funcion
