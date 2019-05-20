@@ -19,7 +19,7 @@ function KitchenOrder(props) {
             <ul className="requested_detail">{showList}</ul>
             <ul className="total">Total = ${total}</ul>
             <button className="btnsubmit" onClick= {props.submitFireBase}> Enviar a Cocina </button>
-            {/* <button className="btnsubmit"  onClick = {props.buttonOrders}>Ver pedidos</button> */}
+            <button className="btnsubmit"  onClick = {props.openKitchen}>Ver pedidos</button>
         </div>
     )
 }

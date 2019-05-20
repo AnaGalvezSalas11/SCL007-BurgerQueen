@@ -1,0 +1,51 @@
+.orderClient1{
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* text-align: center */
+}
+
+.orderClient2{
+    width: 100%;
+    display: block;
+    text-align: left;
+    
+
+}
+
+.orderClient3{
+    width: 30%;
+    position: relative;
+    margin: auto;
+    border-style: outset; 
+    border-width: 4px;
+    border-color: brown;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+
+.titleOrder{
+    font-weight: bold;
+    margin: 8px;
+    justify-content: center;
+    position: relative;
+    left: 30%;
+
+}
+
+.listOrderClient{
+    margin: 4px;
+    align-content: flex-end;
+}
+
+.btnreturn{
+position: relative;
+left: 50%;
+top: 50px;
+}
+
+.contentbtn{
+    display: flex;
+}
+

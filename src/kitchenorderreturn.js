@@ -12,24 +12,24 @@ function Kitchenreturn(props){
             console.log(element)
             return (
                 <div key={i}>
-                <div>{element.food}</div>
-                <div>{element.price}</div>
+                <li>{element.food}.</li>
                 </div>
             )
             
         })
         return(
-            <div key={i}>
-            <div>{item.name}</div>
-            <div>{list2}</div>
+            <div key={i} className= 'orderClient3'>
+            <div className= 'titleOrder'>Cliente: {item.name}</div>
+            <div className = 'listOrderClient' > {list2}</div>
             </div>
         )
     })
     
     
         return(
-            <div>
-                 <div>{content2}</div>
+            <div className = "orderClient1">
+                 <div className = "orderClient2">{content2}</div>
+                 <div className = "contentbtn"><button className = "btnreturn" onClick={props.btnreturn}  >Volver</button></div>
                  
 
             </div>

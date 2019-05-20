@@ -28,7 +28,8 @@ class BurgerQueen extends Component {
             list: [],
             hidediv: false,
             message: "",
-
+            divPrincipal: false,
+            
 
         }
         this.upDate = this.upDate.bind(this);
@@ -40,6 +41,8 @@ class BurgerQueen extends Component {
         this.deleteList = this.deleteList.bind(this);
         this.submit = this.submit.bind(this);
         this.updateOrdersData = this.updateOrdersData.bind(this);
+        this.openKitchen=this.openKitchen.bind(this);
+        this.buttonReturn=this.buttonReturn.bind(this);
 
         database.ref('cocina').on('value',function(snap){
             this.updateOrdersData(snap.val());
@@ -76,9 +79,8 @@ class BurgerQueen extends Component {
 
         setTimeout(()=>{this.setState({
             ...this.state,
-            hidediv: true,
-            // list: [],
-            // name: "",
+            list: [],
+            name: "",
             });
         }, 0);
 
@@ -112,6 +114,15 @@ class BurgerQueen extends Component {
         })
     }
 
+    buttonReturn(){
+        this.setState({
+            ...this.state,
+            divPrincipal: false,
+            hidediv: false,
+
+        })
+    }
+
   
 
    
@@ -142,6 +153,14 @@ class BurgerQueen extends Component {
         })
     }
 
+    openKitchen(){
+        this.setState({
+            ...this.state,
+            hidediv: true,
+            divPrincipal: true,
+        })
+    }
+
     
 
     container() {
@@ -152,7 +171,7 @@ class BurgerQueen extends Component {
         return (
             <div>
                 <div className="title"> Burguer Queen </div>
-                 <div className="main">
+                 {!this.state.divPrincipal && <div className="main">
                     <div className="garzon">
                         <div className="title_garzon">Garzon</div>
                         <div className = "clientName"> 
@@ -174,13 +193,13 @@ class BurgerQueen extends Component {
                         </div>
                     </div>
                     <div className="kitchen">
-                        <KitchenOrder submitFireBase={this.submit} deleteProduct={this.deleteList} listOrder={this.state.list}  nameClient={this.container()}/>
+                        <KitchenOrder submitFireBase={this.submit} deleteProduct={this.deleteList} listOrder={this.state.list} openKitchen = {this.openKitchen} nameClient={this.container()}/>
                     </div>
                     
-                </div>
+                </div>}
 
                 {this.state.hidediv && <div className = "kitchenlist">
-                        <Kitchenreturn returnMessage = {this.state.message} />
+                        <Kitchenreturn btnreturn = {this.buttonReturn} returnMessage = {this.state.message} />
                 </div>}
             </div>
         )}

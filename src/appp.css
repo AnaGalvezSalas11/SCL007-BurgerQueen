@@ -71,7 +71,9 @@
      top: 20px;
  }
 
- 
+.kitchenlist {
+    display: flex
+}
 
 
 
