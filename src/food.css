@@ -1,11 +1,16 @@
 .simpleHamburguerRes, .simpleHamburguerPollo, .simpleHamburguerVegetariana, .french_fries, .onion_rings, .cheese, .egg, .dobleHamburguerRes, .dobleHamburguerPollo, .dobleHamburguerVegetariana{
-    background-color: #A098BE;
-    color: white;
-    padding: 8px 10px;
-    text-align: center;
+    background-color: #f8ecfe;
+    color: #590782;
+    /* text-align: center; */
     text-decoration: none;
     font-size: 15px;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 300px;
+    height: 60px;
+    margin-top: 30px;
+    position: relative;
+    font-weight: bold
 }
 

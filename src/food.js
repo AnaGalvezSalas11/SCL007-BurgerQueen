@@ -8,32 +8,32 @@ function MenuFood (props){
             <button className = "simpleHamburguerRes" onClick={() => {
                     props.onClick([{
                     food: Object.keys(props.listFood.Menu["Hamburguesa simple de res"])[0],
-                    price: props.listFood.Menu["Hamburguesa simple de res"]["Hamburguesa simple de res"]}])}}>Harburguesa Simple de Res$1.500</button>
+                    price: props.listFood.Menu["Hamburguesa simple de res"]["Hamburguesa simple de res"]}])}}>Harburguesa Simple de Res $1.500</button>
 
             <button className = "simpleHamburguerPollo" onClick={()=>{
                     props.onClick([{
                     food: Object.keys(props.listFood.Menu["Hamburguesa simple de pollo"])[0],
-                    price: props.listFood.Menu["Hamburguesa simple de pollo"]["Hamburguesa simple de pollo"]}])}}> Hamburguesa Simple de Pollo </button>
+                    price: props.listFood.Menu["Hamburguesa simple de pollo"]["Hamburguesa simple de pollo"]}])}}> Hamburguesa Simple de Pollo $1.500 </button>
 
             <button className = "simpleHamburguerVegetariana" onClick={()=> {
                 props.onClick([{
                     food: Object.keys(props.listFood.Menu["Hamburguesa simple vegetariana"])[0],
-                    price: props.listFood.Menu["Hamburguesa simple vegetariana"][["Hamburguesa simple vegetariana"]]}])}}>Hamburguesa Simple Vegetariana</button>
+                    price: props.listFood.Menu["Hamburguesa simple vegetariana"][["Hamburguesa simple vegetariana"]]}])}}>Hamburguesa Simple Vegetariana $1.500</button>
 
             <button className = "dobleHamburguerRes" onClick={()=> {
                 props.onClick([{
                     food: Object.keys(props.listFood.Menu["Hamburguesa doble de res"])[0],
-                    price: props.listFood.Menu["Hamburguesa doble de res"][["Hamburguesa doble de res"]]}])}} > Hamburguesa Doble de Res</button>
+                    price: props.listFood.Menu["Hamburguesa doble de res"][["Hamburguesa doble de res"]]}])}} > Hamburguesa Doble de Res $2.500</button>
 
             <button className = "dobleHamburguerPollo" onClick={()=> {
                     props.onClick([{
                     food: Object.keys(props.listFood.Menu["Hamburguesa doble de pollo"])[0],
-                    price: props.listFood.Menu["Hamburguesa doble de pollo"][["Hamburguesa doble de pollo"]]}])}}> Hamburguesa Doble de Pollo</button>
+                    price: props.listFood.Menu["Hamburguesa doble de pollo"][["Hamburguesa doble de pollo"]]}])}}> Hamburguesa Doble de Pollo $2.500</button>
 
             <button className = "dobleHamburguerVegetariana" onClick={()=> {
                     props.onClick([{
                     food: Object.keys(props.listFood.Menu["Hamburguesa doble vegetariana"])[0],
-                    price: props.listFood.Menu["Hamburguesa doble vegetariana"][["Hamburguesa doble vegetariana"]]}])}}> Hamburguesa Doble Vegetariana</button>
+                    price: props.listFood.Menu["Hamburguesa doble vegetariana"][["Hamburguesa doble vegetariana"]]}])}}> Hamburguesa Doble Vegetariana $2.500</button>
 
             <button className = "french_fries" onClick={()=> {
                 props.onClick([{

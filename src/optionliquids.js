@@ -4,7 +4,7 @@ import './optionLiquids.css'
 function Liquids(d){
     return(
         <div className= "liquids">
-            <button onClick={d.buttonl} className="buttonLiquids">Liquidos</button>
+            <button onClick={d.buttonl} className="buttonLiquids">Líquidos</button>
         
         </div>
     )

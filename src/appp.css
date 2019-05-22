@@ -1,5 +1,6 @@
 .garzon{
     width: 50%;
+
 }
 
 .kitchen{
@@ -11,26 +12,21 @@
 }
 
 .title{
-    color: #BF00FF;
+    color: #590782;
     padding: 10px;
     text-decoration: underline; 
     font-size: 40px; 
     line-height: 50px;
     border-radius: 4px;  
     border-color: black;   
-    background: #E6E6E6;
+    background: #f8ecfe;
     position: relative;  
     text-align: -webkit-center; 
     display: block;
+    font-family: Arial;
 }
 
-.title_garzon {
-    position: relative;
-    font-size: 40px;
-    /* top: 10px;  */
-    left: 100px; 
-    /* width: 60%; */
-}
+
 
 .mailing_data, .click_data{
     /* top: 20px;  */
@@ -40,41 +36,51 @@
 }
 
 .mailing_data{
-    font-size: 15px;
-    padding: 3px;
-    border-radius: 13px;
-    border-color: blueviolet; 
+    font-size: 20px;
+    border-radius: 5px;
+    border-color: #590782; 
+    width: 335px;
+    height: 25px;
 
 } 
 
 .click_data{
-    background-color: blueviolet;
+    background-color: #590782;
     color: white;
-    padding: 8px 10px;
+    padding: 7px 20px;
     text-align: center;
     text-decoration: none;
     /* display: flex; */
     font-size: 15px;
     /* margin: 4px 2px; */
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 10px;
  }
 
  .option_menu{
      display: flex;
-     top: 15px;
+     top: 85px;
      position: relative;
+     justify-content: center;
  }
 
  .menu_option{
      position: relative;
-     top: 20px;
+     top: 90px;
+     display: table-caption;
+     /* padding: 40px; */
+     left: 15px;
+     padding: 6px 70px;
  }
 
 .kitchenlist {
-    display: flex
+    display: flex;
 }
 
+.clientName{
+    top: 72px;
+    position: relative;
+}
 
 
  

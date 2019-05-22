@@ -3,7 +3,7 @@ import './optionFood.css'
 
 function OptionFood (b){
     return(
-        <button onClick={b.buttonf}  className="optionButton">Food</button>
+        <button onClick={b.buttonf}  className="optionButton">Hamburguesas</button>
     )
 }
 

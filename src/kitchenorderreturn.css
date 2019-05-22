@@ -19,9 +19,10 @@
     margin: auto;
     border-style: outset; 
     border-width: 4px;
-    border-color: brown;
+    border-color: #590782;
     border-radius: 10px;
     margin-top: 10px;
+    font-family: arial;
 
 }
 
@@ -43,6 +44,17 @@
 position: relative;
 left: 50%;
 top: 50px;
+background-color: #590782;
+color: white;
+/* text-align: center; */
+text-decoration: none;
+font-size: 15px;
+cursor: pointer;
+border-radius: 10px;
+width: 100px;
+height: 30px;
+margin-top: 5px;
+margin-bottom: 30px;
 }
 
 .contentbtn{

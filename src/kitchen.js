@@ -15,11 +15,13 @@ function KitchenOrder(props) {
     return (
         <div>
             <div className="title_kitchen">Pedido</div>
-            <div className="content">Nombre Cliente: {props.nameClient}</div>
+            <div className="content"> {props.nameClient}</div>
             <ul className="requested_detail">{showList}</ul>
             <ul className="total">Total = ${total}</ul>
+            <div className= "btnSubmitOrder">
             <button className="btnsubmit" onClick= {props.submitFireBase}> Enviar a Cocina </button>
             <button className="btnsubmit"  onClick = {props.openKitchen}>Ver pedidos</button>
+            </div>
         </div>
     )
 }

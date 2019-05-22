@@ -173,7 +173,7 @@ class BurgerQueen extends Component {
                 <div className="title"> Burguer Queen </div>
                  {!this.state.divPrincipal && <div className="main">
                     <div className="garzon">
-                        <div className="title_garzon">Garzon</div>
+                        <div className="title_garzon"></div>
                         <div className = "clientName"> 
                             <input className="mailing_data" placeholder="Nombre Cliente" value={this.state.input} onChange={this.upDate2} ></input>
                             <button onClick={this.upDate} className="click_data">Listo</button>
