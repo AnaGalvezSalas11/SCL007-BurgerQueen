@@ -170,7 +170,7 @@ class BurgerQueen extends Component {
     render() {
         return (
             <div>
-                <div className="title"> Burguer Queen </div>
+                <div className="title"> Burger Queen </div>
                  {!this.state.divPrincipal && <div className="main">
                     <div className="garzon">
                         <div className="title_garzon"></div>
